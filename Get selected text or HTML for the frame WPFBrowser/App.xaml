@@ -1,0 +1,9 @@
+﻿<Application x:Class="Get_selected_text_or_HTML_for_the_frame_WPFBrowser.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Get_selected_text_or_HTML_for_the_frame_WPFBrowser"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
