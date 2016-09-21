@@ -1,12 +1,32 @@
-﻿<Window x:Class="Get_selected_text_or_HTML_for_the_frame_WPFBrowser.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Get_selected_text_or_HTML_for_the_frame_WPFBrowser"
+        xmlns:WPF="clr-namespace:DotNetBrowser.WPF;assembly=DotNetBrowser" x:Class="Get_selected_text_or_HTML_for_the_frame_WPFBrowser.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="369.351" Width="933.894" Loaded="Window_Loaded">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="194*"/>
+            <ColumnDefinition Width="343*"/>
+            <ColumnDefinition Width="230*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="76*"/>
+            <RowDefinition Height="243*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnSelectedText" Grid.Row="0" Grid.Column="0" Content="Select text" HorizontalAlignment="Left" Margin="46,10,0,0" VerticalAlignment="Top" Width="75" Click="btnSelectedText_Click" Height="20"/>
+        <Button x:Name="btnSelectedHtml" Grid.Row="0" Grid.Column="1" Content="Get frames" HorizontalAlignment="Left" Margin="57,10,0,0" VerticalAlignment="Top" Width="75" Click="btnSelectedHtml_Click" Height="20"/>
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" Name="layout">
+            <WPF:WPFBrowserView  Name="browserView" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="1" />
+        </Grid>
+        <Label x:Name="label" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="2" VerticalAlignment="Top" Height="30" Width="227"/>
+        <Grid Grid.Row="1" Grid.Column="2">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Grid.Row="1" Grid.Column="2" VerticalAlignment="Top"/>
+            </ScrollViewer>
+        </Grid>
     </Grid>
 </Window>
